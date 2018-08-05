@@ -37,6 +37,14 @@ export default {
       selectedIndex: 0
     }
   },
+  mounted: function() {
+    document.onkeydown = e => {
+      if (e.key == "s" && e.metaKey) {
+        this.saveMemos()
+        return false
+      }
+    }
+  },
   created: function() {
     firebase
       .database()
@@ -47,6 +55,9 @@ export default {
           this.memos = result.val()
         }
       })
+  },
+  beforeDestroy: function() {
+    document.onkeydown = null
   },
   methods: {
     logout: function() {
