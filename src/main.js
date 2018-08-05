@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import * as firebase from 'firebase';
 import 'shitajicss'
+import './scss/style.scss'
 
 const {
   VUE_APP_FIREBASE_API_KEY,
