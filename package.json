@@ -17,6 +17,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
     "@vue/cli-service": "^3.0.0-rc.10",
     "firebase-tools": "^4.0.2",
+    "marked": "^0.4.0",
     "vue-template-compiler": "^2.5.16"
   },
   "eslintConfig": {
