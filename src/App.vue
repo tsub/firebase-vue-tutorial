@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Home v-if="!isLogin"></Home>
+    <Editor v-if="isLogin"></Editor>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
+import Editor from './components/Editor.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      isLogin: false
+    }
+  },
   components: {
-    HelloWorld
+    Home,
+    Editor
   }
 }
 </script>
